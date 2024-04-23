@@ -1,6 +1,10 @@
+/* eslint-disable */
 import { v1 as uuidv1 } from 'uuid';
-import createHmac from 'createhmac-chaintor';
-import { Buffer } from 'buffer';
+// import { createHmac } from 'polyfill-createhmac';
+import { createHmac } from 'crypto'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const bufferToBase64 = (buffer) => {
   return buffer
@@ -57,15 +61,16 @@ export const createToken = () => {
     const query = stringify(formatJSON(object));
     const buffer = Buffer.from(query, 'utf8');
 
+    console.log('NETLESSSDK_' + bufferToBase64(buffer))
     return 'NETLESSSDK_' + bufferToBase64(buffer);
   };
 };
 
 console.log(
   createToken()(
-    '8VrssLehjN8c8rLb',
-    'fHRoBnHRNOc4FCFjC6QgqhiCuTFYTdHm',
-    1000 * 60 * 60,
+    process.env.VITE_AGORA_WHITE_AK,
+    process.env.VITE_AGORA_WHITE_SK,
+    1000 * 60 * 100,
     { role: 0 }
   )
 );

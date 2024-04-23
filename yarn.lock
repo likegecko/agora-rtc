@@ -1332,6 +1332,11 @@ dom-walk@^0.1.0:
   resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.2.tgz#0c548bef048f4d1f2a97249002236060daa3fd84"
   integrity sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w==
 
+dotenv@^16.4.5:
+  version "16.4.5"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.5.tgz#cdd3b3b604cb327e286b4762e13502f717cb099f"
+  integrity sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==
+
 emittery@^0.9.2:
   version "0.9.2"
   resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.9.2.tgz#0a57c40773c6da380115c85bd67d381dd9e22f6f"
@@ -2633,6 +2638,11 @@ pkcs7@^1.0.4:
   integrity sha512-afRERtHn54AlwaF2/+LFszyAANTCggGilmcmILUzEjvs3XgFZT+xE6+QWQcAGmu4xajy+Xtj7acLOPdx5/eXWQ==
   dependencies:
     "@babel/runtime" "^7.5.5"
+
+polyfill-createhmac@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/polyfill-createhmac/-/polyfill-createhmac-1.0.0.tgz#9fcaaa234751c5f780ec8dac3d6ade5b48361751"
+  integrity sha512-3YnHpgd60l1a24WmRasvqfMQuedphhff0R0fjPYBZCKg04Cl41FxkYTh1GnVYXCDrmZOBce9t3qV00cVaI700Q==
 
 possible-typed-array-names@^1.0.0:
   version "1.0.0"

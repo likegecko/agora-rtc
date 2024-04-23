@@ -1,10 +1,9 @@
 import { useFastboard, Fastboard } from "@netless/fastboard-react";
 
 const WhiteBoard = ({nickName, roomToken, uuid}: {nickName: string, roomToken: string, uuid: string}) => {
-  console.log(nickName, roomToken, uuid, '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
   const fastboard = useFastboard(() => ({
     sdkConfig: {
-      appIdentifier: "zH-UAP4XEe6X_REUu_elzA/yxXnbmP4zpsxBQ",
+      appIdentifier: import.meta.env.VITE_AGORA_WHITE_APP_ID,
       region: "cn-hz",
     },
     joinRoom: {
