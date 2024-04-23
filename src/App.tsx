@@ -3,6 +3,7 @@ import AgoraUIKit, { type RtcPropsInterface } from 'agora-react-uikit';
 
 import WhiteBoard from './WhiteBoard'
 
+//@ts-ignore
 import { createToken } from './generateToken'
 
 import 'agora-chat-uikit/style.css';
@@ -36,7 +37,7 @@ const App = () => {
     btn: { backgroundColor: '#007bff', cursor: 'pointer', borderRadius: 5, padding: 5, color: '#ffffff', fontSize: 20 },
   }
 
-  const SDK_TOKEN = 'NETLESSSDK_YWs9OFZyc3NMZWhqTjhjOHJMYiZleHBpcmVBdD0xNzEzNzc5MDM2NjExJm5vbmNlPTc0YmVhOTMwLTAwODQtMTFlZi1iOWY3LTU1YTgxMWM5MmY1YiZyb2xlPTAmc2lnPTZkYTUyNjdiNGMzNGE0Y2U3OGVmM2EzODk4YTc5MTE1ZjMxYzhmZTQzZTU3ZWJiMzU5MTY5NjczMTAyYzQyOTA'
+  // const SDK_TOKEN = 'NETLESSSDK_YWs9OFZyc3NMZWhqTjhjOHJMYiZleHBpcmVBdD0xNzEzNzc5MDM2NjExJm5vbmNlPTc0YmVhOTMwLTAwODQtMTFlZi1iOWY3LTU1YTgxMWM5MmY1YiZyb2xlPTAmc2lnPTZkYTUyNjdiNGMzNGE0Y2U3OGVmM2EzODk4YTc5MTE1ZjMxYzhmZTQzZTU3ZWJiMzU5MTY5NjczMTAyYzQyOTA'
 
   const createRoomToken = async (sdkToken: string) => {
     let roomUuid: string;
@@ -72,6 +73,7 @@ const App = () => {
       setRoomUuid(json[0].uuid)
     })
 
+    //@ts-ignore
     await fetch(`https://api.netless.link/v5/tokens/rooms/${roomUuid}`, {
       method: 'post',
       headers: {
