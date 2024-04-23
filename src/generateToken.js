@@ -61,7 +61,6 @@ export const createToken = () => {
     const query = stringify(formatJSON(object));
     const buffer = Buffer.from(query, 'utf8');
 
-    console.log('NETLESSSDK_' + bufferToBase64(buffer))
     return 'NETLESSSDK_' + bufferToBase64(buffer);
   };
 };

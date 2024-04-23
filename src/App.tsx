@@ -11,7 +11,6 @@ import 'agora-chat-uikit/style.css';
 const APP_ID = import.meta.env.VITE_AGORA_RTC_APP_ID
 const TOKEN = import.meta.env.VITE_AGORA_RTC_TOKEN
 const CHANNEL = 'wonderverse'
-console.log(APP_ID)
 const App = () => {
   const [userName, setUserName] = useState('');
   const [roomToken, setRoomToken] = useState('')
@@ -40,7 +39,6 @@ const App = () => {
   // const SDK_TOKEN = 'NETLESSSDK_YWs9OFZyc3NMZWhqTjhjOHJMYiZleHBpcmVBdD0xNzEzNzc5MDM2NjExJm5vbmNlPTc0YmVhOTMwLTAwODQtMTFlZi1iOWY3LTU1YTgxMWM5MmY1YiZyb2xlPTAmc2lnPTZkYTUyNjdiNGMzNGE0Y2U3OGVmM2EzODk4YTc5MTE1ZjMxYzhmZTQzZTU3ZWJiMzU5MTY5NjczMTAyYzQyOTA'
 
   const createRoomToken = async (sdkToken: string) => {
-    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!', sdkToken)
     let roomUuid: string;
     // NOTE: 방을 만드는 API
     // await fetch('https://api.netless.link/v5/rooms', {
